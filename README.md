@@ -50,3 +50,21 @@ These scripts include -
  
 By referencing test-case01.sh you should be able to build your own test set
 in short time.
+
+mysql服务器和sysbench客户端分离的脚本：
+运行方法：
+    1. 在sysbench服务器上直接运行sh sysben-remote-start.sh即可
+    2.脚本sysben-remote-start.sh执行完毕后，在日志目录（运行终端上有显示日志的位置。）中可以查看压测结果。
+
+修改mysql服务器的IP地址：
+vi sb/mysql-8.0.cfg进行修改mysql_server变量值即可
+
+sysben-remote-start.sh脚本执行功能如下：
+    1.  把sysbench服务器上当前目录下mysql目录下的脚本都复制到远程mysql服务器上。
+    2.启动远程mysql服务器上的mysql服务，并做数据库初始化。
+    3. 等待远程mysql服务器上的mysql服务成功启动后，sysbench服务器端启动sysbench压测，执行的workloads依次为：
+prepare 
+oltp_read_only oltp_insert oltp_update_index 
+oltp_update_non_index 
+oltp_read_write 
+oltp_write_only
