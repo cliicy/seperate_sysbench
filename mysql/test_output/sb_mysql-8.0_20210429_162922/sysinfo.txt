@@ -1,0 +1,132 @@
+
+[sys]
+Dell Inc.
+Precision T5600
+01
+
+[cpu]
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                32
+On-line CPU(s) list:   0-31
+Thread(s) per core:    2
+Core(s) per socket:    8
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 45
+Model name:            Intel(R) Xeon(R) CPU E5-2690 0 @ 2.90GHz
+Stepping:              7
+CPU MHz:               3292.023
+CPU max MHz:           2901.0000
+CPU min MHz:           1200.0000
+BogoMIPS:              5785.96
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              20480K
+NUMA node0 CPU(s):     0-7,16-23
+NUMA node1 CPU(s):     8-15,24-31
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm epb pti tpr_shadow vnmi flexpriority ept vpid xsaveopt dtherm ida arat pln pts
+
+[memory]
+              total        used        free      shared  buff/cache   available
+Mem:         128376       12186      112618         113        3571      115153
+Swap:          2039           0        2039
+
+[disk]
+NAME    MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sfdv0n1 251:0    0   3.5T  0 disk /data/sfdv0n1
+sda       8:0    0 931.5G  0 disk 
+├─sda4    8:4    0 889.5G  0 part /data
+├─sda2    8:2    0     2G  0 part [SWAP]
+├─sda3    8:3    0    20G  0 part /usr/local
+└─sda1    8:1    0    20G  0 part /
+Filesystem           Size  Used Avail Use% Mounted on
+devtmpfs              63G     0   63G   0% /dev
+tmpfs                 63G     0   63G   0% /dev/shm
+tmpfs                 63G  114M   63G   1% /run
+tmpfs                 63G     0   63G   0% /sys/fs/cgroup
+/dev/sda1             20G  6.9G   12G  37% /
+/dev/sda3             20G   45M   19G   1% /usr/local
+/dev/sda4            876G   72M  831G   1% /data
+tmpfs                 13G     0   13G   0% /run/user/0
+192.168.3.20:/share  8.1T  4.5T  3.2T  59% /share
+/dev/sfdv0n1         3.5T   89M  3.3T   1% /data/sfdv0n1
+
+[nvme]
+Node             SN                   Model                                    Namespace Usage                      Format           FW Rev  
+---------------- -------------------- ---------------------------------------- --------- -------------------------- ---------------- --------
+/dev/nvmesfdv0n1 UC1945A7011M         CSDU3RF040B1                             1           3.84  TB /   3.84  TB    512   B +  0 B   4886
+
+[os]
+Linux TENCENT64.site 4.14.105-19-0018 #1 SMP Thu Dec 3 09:59:51 CST 2020 x86_64 x86_64 x86_64 GNU/Linux
+TencentOS Server 2.4 (TK3)
+
+[filesystem]
+TARGET                           SOURCE              FSTYPE      OPTIONS
+/                                /dev/sda1           ext4        rw,noatime,data=ordered
+├─/sys                           sysfs               sysfs       rw,relatime
+│ ├─/sys/kernel/security         securityfs          securityfs  rw,nosuid,nodev,noexec,relatime
+│ ├─/sys/fs/cgroup               tmpfs               tmpfs       ro,nosuid,nodev,noexec,mode=755
+│ │ ├─/sys/fs/cgroup/systemd     cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd
+│ │ ├─/sys/fs/cgroup/cpuset      cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,cpuset
+│ │ ├─/sys/fs/cgroup/rdma        cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,rdma
+│ │ ├─/sys/fs/cgroup/hugetlb     cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,hugetlb
+│ │ ├─/sys/fs/cgroup/freezer     cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,freezer
+│ │ ├─/sys/fs/cgroup/blkio       cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,blkio
+│ │ ├─/sys/fs/cgroup/memory      cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,memory
+│ │ ├─/sys/fs/cgroup/cpu,cpuacct cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,cpu,cpuacct
+│ │ ├─/sys/fs/cgroup/devices     cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,devices
+│ │ ├─/sys/fs/cgroup/net_cls     cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,net_cls
+│ │ ├─/sys/fs/cgroup/perf_event  cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,perf_event
+│ │ └─/sys/fs/cgroup/pids        cgroup              cgroup      rw,nosuid,nodev,noexec,relatime,pids
+│ ├─/sys/kernel/config           configfs            configfs    rw,relatime
+│ └─/sys/kernel/debug            debugfs             debugfs     rw,relatime
+├─/proc                          proc                proc        rw,relatime
+│ └─/proc/sys/fs/binfmt_misc     systemd-1           autofs      rw,relatime,fd=31,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=46707
+│   └─/proc/sys/fs/binfmt_misc   binfmt_misc         binfmt_misc rw,relatime
+├─/dev                           devtmpfs            devtmpfs    rw,nosuid,size=65717216k,nr_inodes=16429304,mode=755
+│ ├─/dev/shm                     tmpfs               tmpfs       rw
+│ ├─/dev/pts                     devpts              devpts      rw,relatime,gid=5,mode=620,ptmxmode=000
+│ ├─/dev/hugepages               hugetlbfs           hugetlbfs   rw,relatime,pagesize=2M
+│ └─/dev/mqueue                  mqueue              mqueue      rw,relatime
+├─/run                           tmpfs               tmpfs       rw,nosuid,nodev,mode=755
+│ └─/run/user/0                  tmpfs               tmpfs       rw,nosuid,nodev,relatime,size=13145744k,mode=700
+├─/usr/local                     /dev/sda3           ext4        rw,noatime,data=ordered
+├─/data                          /dev/sda4           ext4        rw,noatime,data=ordered
+│ └─/data/sfdv0n1                /dev/sfdv0n1        ext4        rw,noatime,discard,data=ordered
+├─/var/lib/nfs/rpc_pipefs        sunrpc              rpc_pipefs  rw,relatime
+└─/share                         192.168.3.20:/share nfs4        rw,relatime,vers=4.0,rsize=1048576,wsize=1048576,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=192.168.111.187,local_lock=none,addr=192.168.3.20
+
+[css-status]
+
+SFX card: /dev/sfdv0n1
+PCIe Vendor ID:                    0xcc53                             
+PCIe Subsystem Vendor ID:          0xcc53                             
+Manufacturer:                      ScaleFlux                          
+Model:                             CSDU3RF040B1                       
+Serial Number:                     UC1945A7011M                       
+OPN:                               CSDU3RF040B1                       
+FPGA BitStream:                    4886                               
+Drive Type:                        U.2-V                              
+Software Revision:                 3.2.5.4-54254                      
+Temperature:                       52 C                               
+Power Consumption:                 13 W                               
+Atomic Write mode:                 OFF                                
+Percentage Used:                   3%                                 
+Data Read:                         353064 GiB                         
+Data Written:                      193330 GiB                         
+Correctable Error Cnt:             0                                  
+Uncorrectable Error Cnt:           0                                  
+PCIe Link Status:                  Speed 8GT/s, Width x4              
+PCIe Device Status:                Good                               
+Formatted Capacity:                3840 GB                            
+Provisioned Capacity:              3840 GB                            
+Compression Ratio:                 800%                               
+Physical Used Ratio:               0.06%                              
+Free Physical Space:               3837 GB                            
+Critical Warning:                  0                                  

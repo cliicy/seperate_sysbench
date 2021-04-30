@@ -1,0 +1,5 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sfdv0n1    3.5T   89M  3.3T   1% /data/sfdv0n1
+free_space physical_size logical_size comp_ratio provisioned_cap space_flag
+7497327768       4148760   117575256      28.33   7501476528         0
+4	/data/sfdv0n1/mysql-8.0.21
